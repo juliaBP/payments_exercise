@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2021_07_02_135711) do
     t.decimal "amount", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "loans_id", null: false
+    t.integer "loan_id", null: false
   end
 
 end
