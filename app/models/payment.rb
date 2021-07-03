@@ -1,6 +1,8 @@
 class Payment < ActiveRecord::Base
   belongs_to :loan
 
+  attr_readonly :amount, :loan_id
+
   validates :loan, presence: true
   validate :for_outstanding_balance
 

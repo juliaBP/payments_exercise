@@ -1,6 +1,8 @@
 class Loan < ActiveRecord::Base
   has_many :payments
 
+  attr_readonly :funded_amount
+
   after_initialize :set_outstanding_balance
   validate :funded_amount_ok?
   validate :outstanding_balance_ok?
